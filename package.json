@@ -1,0 +1,31 @@
+{
+  "name": "backend-starter",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "bun run --watch src/index.ts",
+    "test": "bun test",
+    "test:unit": "bun test ./src",
+    "test:integration": "bun test ./tests",
+    "typecheck": "tsc",
+    "db:emit": "prisma contract emit",
+    "db:plan": "prisma migration plan --name",
+    "db:migrate": "prisma db migrate --advance-ref db",
+    "db:verify": "prisma db verify",
+    "seed": "bun src/prisma/seed.ts"
+  },
+  "dependencies": {
+    "@prisma/orm-postgres": "8.0.0-rc.14",
+    "bcrypt": "6.0.0",
+    "dotenv": "18.0.5",
+    "elysia": "1.4.30",
+    "envalid": "8.2.0",
+    "prisma": "8.0.0-rc.20"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "10.6.0",
+    "@types/bcrypt": "6.0.0",
+    "@types/bun": "1.4.2",
+    "typescript": "7.0.2"
+  }
+}
